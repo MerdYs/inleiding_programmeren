@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8e8c8;
+}
+
+#pizza_container {
+    position: relative;
+    display: inline-block;
+}
+
+#pizza {
+    width: 300px;
+}
+
+.topping-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.topping-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#bake-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Maker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Pizza Maker</h1>
+    <div id="pizza-container">
+        <img id="pizza" src="images/pizza_bodem.png" alt="Pizzabodem">
+    </div>
+    <div>
+        <button class="topping-btn" onclick="addTopping('cheese')" id="cheese-btn">Voeg Kaas toe</button>
+        <button class="topping-btn" onclick="addTopping('pepperoni')" id="pepperoni-btn">Voeg Pepperoni toe</button>
+        <button class="topping-btn" onclick="addTopping('mushrooms')" id="mushroom-btn">Voeg Champignons toe</button>
+    </div>
+    <button id="bake-btn" onclick="bakePizza()">Bak de Pizza!</button>
+
+    <audio id="slice-sound" src="sounds/slice.mp3"></audio>
+    <audio id="bake-sound" src="sounds/bake.mp3"></audio>
+
+</body>
+</html>
