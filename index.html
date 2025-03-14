@@ -9,18 +9,17 @@
 </head>
 <body>
     <h1>Pizza Maker</h1>
+<main>
+
     <div id="pizza-container">
-        <img id="pizza" src="images/pizza_bodem.png" alt="Pizzabodem">
+        <img id="pizza-base" src="images/pizza_bodem.png" alt="Pizzabodem">
+        <img id="pizza-pepperoni" src="images/pizza_pepperoni.png" alt="Pepperoni Pizza">
     </div>
-    <div>
-        <button class="topping-btn" onclick="addTopping('cheese')" id="cheese-btn">Voeg Kaas toe</button>
-        <button class="topping-btn" onclick="addTopping('pepperoni')" id="pepperoni-btn">Voeg Pepperoni toe</button>
-        <button class="topping-btn" onclick="addTopping('mushrooms')" id="mushroom-btn">Voeg Champignons toe</button>
+
+    <div class="button-container">
+        <button class="btn yes-btn" onclick="addPepperoni(true)">Ja</button>
+        <button class="btn no-btn" onclick="addPepperoni(false)">Nee</button>
     </div>
-    <button id="bake-btn" onclick="bakePizza()">Bak de Pizza!</button>
-
-    <audio id="slice-sound" src="sounds/slice.mp3"></audio>
-    <audio id="bake-sound" src="sounds/bake.mp3"></audio>
-
+</main>
 </body>
 </html>
