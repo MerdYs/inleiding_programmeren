@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Maker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Pizza Maker</h1>
-<main>
+    <header>
+        <h1>🍕Pizza Maker🍕</h1>
+    </header>
 
-    <div id="pizza-container">
-        <img id="pizza-base" src="images/pizza_bodem.png" alt="Pizzabodem">
-        <img id="pizza-pepperoni" src="images/pizza_pepperoni.png" alt="Pepperoni Pizza">
-    </div>
+    <main>
+        <section id="pizza">
+                <img id="bodem" src="images/pizza_bodem.png" alt="Pizza bodem">
+                <img id="pepperoni" src="images/pizza_pepperoni.png" alt="Pepperoni Pizza">
+        </section>
 
-    <div class="button-container">
-        <button class="btn yes-btn" onclick="addPepperoni(true)">Ja</button>
-        <button class="btn no-btn" onclick="addPepperoni(false)">Nee</button>
-    </div>
-</main>
+        <section id="controls">
+            <h2>Wilt u pepperoni op de pizza?</h2>
+            <div class="buttons">
+                <button id="yes" class="btn yes" aria-label="Voeg pepperoni toe">Ja</button>
+                <button id="no" class="btn no" aria-label="Verwijder pepperoni">Nee</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 alle rechten voorbehouden</p>
+    </footer>
 </body>
 </html>
