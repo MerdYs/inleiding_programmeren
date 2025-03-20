@@ -5,31 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Maker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>🍕Pizza Maker🍕</h1>
     </header>
-
+    
     <main>
         <section class="pizza">
             <h2>Uw Pizza</h2>
-                <img id="bodem" src="images/pizza_bodem.png" alt="Pizza bodem">
+            <img id="bodem" src="images/pizza_bodem.png" alt="Pizza bodem">
                 <img id="pepperoni" src="images/pizza_pepperoni.png" alt="Pepperoni Pizza">
-        </section>
+                <img id="champignon" src="images/27-Bijzondere-eigenschappen-van-katten-1200x675.jpg" alt="Champigon Pizza">
+                <img id="olijven" src="images/pexels-linda-rusinko-7483193-scaled-e1715681507600.webp" alt="Olijven Pizza">
+            </section>
+            
+            <section id="controlspep">
+                <h2>Wilt u pepperoni op de pizza?</h2>
+                <div class="buttons">
+                    <button id="yespep" class="btn yes">Ja</button>
+                    <button id="nopep" class="btn no">Nee</button>
+                </div>
+            </section>
 
-        <section id="controls">
-            <h2>Wilt u pepperoni op de pizza?</h2>
-            <div class="buttons">
-                <button id="yes" class="btn yes" aria-label="Voeg pepperoni toe">Ja</button>
-                <button id="no" class="btn no" aria-label="Verwijder pepperoni">Nee</button>
-            </div>
-        </section>
-    </main>
+            <section id="controlscham">
+                <h2>Wilt u champigons op de pizza?</h2>
+                <div class="buttons">
+                    <button id="yescham" class="btn yes">Ja</button>
+                    <button id="nocham" class="btn no">Nee</button>
+                </div>
+            </section>
 
-    <footer>
-        <p>&copy; 2025 alle rechten voorbehouden</p>
-    </footer>
-</body>
+            <section id="controlsoli">
+                <h2>Wilt u olijven op de pizza?</h2>
+                <div class="buttons">
+                    <button id="yesoli" class="btn yes">Ja</button>
+                    <button id="nooli" class="btn no">Nee</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 alle rechten voorbehouden</p>
+        </footer>
+    </body>
+    <script src="script2.js" defer></script>
 </html>
