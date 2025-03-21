@@ -1,36 +1,67 @@
-//https://stackoverflow.com/questions/9419263/how-to-play-audio
-const addSound = new Audio("sounds/toegevoegd.mp3");
-const removeSound = new Audio("sounds/verwijderd.mp3");
-
-document.addEventListener("DOMContentLoaded", function () {
-    const yesButton = document.getElementById("yes");
-    const noButton = document.getElementById("no");
-    const pepperoni = document.getElementById("pepperoni");
-
-    noButton.disabled = true;
-
-    yesButton.addEventListener("click", function () {
-        if (!yesButton.disabled) { 
-            pepperoni.style.display = "block";
-            playSound("sounds/toegevoegd.mp3");
-            
-            yesButton.disabled = true;
-            noButton.disabled = false;
-        }
-    });
-
-    noButton.addEventListener("click", function () {
-        if (!noButton.disabled) {
-            pepperoni.style.display = "none";
-            playSound("sounds/verwijderd.mp3");
-
-            yesButton.disabled = false;
-            noButton.disabled = true;
-        }
-    });
-
-    function playSound(src) {
-        const sound = new Audio(src);
-        sound.play();
+const toppings = {
+    pepperoni: {
+        img: document.getElementById("pepperoni"), 
+        yesBtn: document.getElementById("yespep"), 
+        noBtn: document.getElementById("nopep")     
+    },
+    kaas: {
+        img: document.getElementById("kaas"), 
+        yesBtn: document.getElementById("yeskaas"),
+        noBtn: document.getElementById("nokaas")    
+    },
+    olijven: {
+        img: document.getElementById("olijven"), 
+        yesBtn: document.getElementById("yesoli"), 
+        noBtn: document.getElementById("nooli")    
     }
-});
+};
+
+const sounds = {
+    pepperoni: { 
+        add: new Audio("sounds/pepperonitoeg.mp3"), 
+        remove: new Audio("sounds/pepperoniver.mp3") 
+    },
+    kaas: { 
+        add: new Audio("sounds/kaastoeg.mp3"), 
+        remove: new Audio("sounds/kaasver.mp3") 
+    },
+    olijven: { 
+        add: new Audio("sounds/olijventoeg.mp3"), 
+        remove: new Audio("sounds/olijvenver.mp3") 
+    }
+};
+
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
+    Object.keys(toppings).forEach(toppingFoto => {
+        let topping = toppings[toppingFoto]; 
+        
+        topping.img.style.display = "none";  
+        topping.noBtn.disabled = true;  
+
+        topping.yesBtn.addEventListener("click", () => toggleTopping(toppingFoto, true));
+        topping.noBtn.addEventListener("click", () => toggleTopping(toppingFoto, false));
+    });
+}
+
+
+function toggleTopping(toppingFoto, keuzen) { 
+    let topping = toppings[toppingFoto];
+
+    if (keuzen) {
+        topping.img.style.display = "block"; 
+        playSound(sounds[toppingFoto].add);
+        topping.yesBtn.disabled = true;       
+        topping.noBtn.disabled = false;   
+    } else {
+        topping.img.style.display = "none"; 
+        playSound(sounds[toppingFoto].remove);
+        topping.yesBtn.disabled = false;     
+        topping.noBtn.disabled = true;   
+    }
+}
+
+function playSound(audio) {
+    audio.play();
+}
