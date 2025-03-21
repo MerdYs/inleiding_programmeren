@@ -1,3 +1,4 @@
+//https://www.w3schools.com/js/js_array_methods.asp
 const toppings = {
     pepperoni: {
         img: document.getElementById("pepperoni"), 
@@ -16,6 +17,7 @@ const toppings = {
     }
 };
 
+//https://www.w3schools.com/js/js_array_methods.asp
 const sounds = {
     pepperoni: { 
         add: new Audio("sounds/pepperonitoeg.mp3"), 
@@ -33,6 +35,7 @@ const sounds = {
 
 document.addEventListener("DOMContentLoaded", init);
 
+//https://www.w3schools.com/js/js_object_methods.asp
 function init() {
     Object.keys(toppings).forEach(toppingFoto => {
         let topping = toppings[toppingFoto]; 
